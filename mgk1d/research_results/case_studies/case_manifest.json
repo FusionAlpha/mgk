@@ -1,0 +1,43 @@
+{
+  "schemaVersion": 1,
+  "repositoryRevision": "cef89e4c3a0edaff06942140754706b3a60ef0b3",
+  "generated": "2026-09-01",
+  "cases": [
+    {
+      "id": "electrostatic_cbc_adiabatic_itg",
+      "title": "Electrostatic CBC adiabatic-electron ITG",
+      "physics": "electrostatic ITG",
+      "electronClosure": "adiabatic",
+      "backends": ["Python CPU double"],
+      "dataDirectory": "research_results/case_studies/electrostatic_cbc_adiabatic_itg/data",
+      "figureDirectory": "research_results/case_studies/electrostatic_cbc_adiabatic_itg/figures"
+    },
+    {
+      "id": "electrostatic_cbc_kinetic_itg_tem",
+      "title": "Electrostatic CBC kinetic-electron ITG/TEM",
+      "physics": "electrostatic ITG and TEM",
+      "electronClosure": "kinetic",
+      "backends": ["Python CPU double"],
+      "dataDirectory": "research_results/case_studies/electrostatic_cbc_kinetic_itg_tem/data",
+      "figureDirectory": "research_results/case_studies/electrostatic_cbc_kinetic_itg_tem/figures"
+    },
+    {
+      "id": "rewoldt2007_figure1_cross_code",
+      "title": "Rewoldt 2007 Figure 1 cross-code comparison",
+      "physics": "electrostatic ITG",
+      "electronClosure": "adiabatic",
+      "backends": ["MGK1D", "FULL", "GTC", "GT3D"],
+      "dataDirectory": "research_results/case_studies/rewoldt2007_figure1_cross_code/data",
+      "figureDirectory": "research_results/case_studies/rewoldt2007_figure1_cross_code/figures"
+    },
+    {
+      "id": "electromagnetic_xie2016_kbm",
+      "title": "Xie 2016 electromagnetic KBM accuracy",
+      "physics": "electromagnetic KBM",
+      "electronClosure": "kinetic",
+      "backends": ["Python CPU double", "Python GPU double", "Python GPU single", "CGYRO"],
+      "dataDirectory": "research_results/case_studies/electromagnetic_xie2016_kbm/data",
+      "figureDirectory": "research_results/case_studies/electromagnetic_xie2016_kbm/figures"
+    }
+  ]
+}

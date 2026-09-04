@@ -1,0 +1,82 @@
+&parallelization
+/
+
+&box
+  n_spec = 1
+  nx0 = 4
+  nky0 = 1
+  nz0 = 128
+  nv0 = 24
+  nw0 = 16
+  kymin = 2.1
+  lv = 3.0
+  lw = 9.0
+  adapt_lx = F
+  lx = 1.0
+  x0 = 0.8
+  ky0_ind = 1
+/
+
+&in_out
+  diagdir = 'out'
+  read_checkpoint = F
+  write_checkpoint = F
+  istep_field = 500
+  istep_mom = 500
+  istep_nrg = 10
+  istep_omega = 20
+  istep_vsp = 1000
+  istep_schpt = 5000
+  istep_energy = 100
+  write_std = T
+/
+
+&general
+  nonlinear = F
+  comp_type = 'EV'
+  timescheme = 'RK4'
+  calc_dt = T
+  dt_max = 0.05
+  ntimesteps = 500
+  timelim = 1800
+  simtimelim = 25.0
+  omega_prec = 1.0e-3
+  beta = 0.0
+  debye2 = 0.0
+  collision_op = 'none'
+  coll = 0.0
+  init_cond = 'alm'
+  which_ev = 'jd'
+  n_ev = 2
+  ev_max_it = 10000
+  ev_n_test = 32
+  hyp_z = -1.0
+  perf_tsteps = -1
+/
+
+&geometry
+  magn_geometry = 'vmec'
+  norm_fieldline_alpha = 0.0
+  q0 = -1111.0
+  shat = -0.107
+  n_pol = 6.0
+  geomdir = '.'
+  geomfile = 'wout_kjm30_vmecpp.nc'
+  dpdx_term = 'gradB_eq_curv'
+  dpdx_pm = 0.0
+  norm_flux_projection = F
+/
+
+&species
+  name = 'ions'
+  omn = 1.0
+  omt = 3.0
+  mass = 1.0
+  temp = 1.0
+  dens = 1.0
+  charge = 1.0
+/
+
+&info
+  comment = 'GENE W7-X Test 1 server CPU audit; auto dt, no SLEPc'
+/
