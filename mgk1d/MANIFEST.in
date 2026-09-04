@@ -1,0 +1,39 @@
+include README.md
+include CONFIGURATION_REFERENCE.md
+include GPU_GUIDE.md
+include BENCHMARK_CASES.md
+include CHANGELOG.md
+include COMPATIBILITY.md
+include SECURITY.md
+include SUPPORT.md
+include THIRD_PARTY_NOTICES.md
+include PUBLISHED_VALIDATION_CASES.md
+include RELEASE_PROCESS.md
+include LEGAL_REVIEW_REQUIRED.md
+include requirements-cpu.txt
+include requirements.txt
+recursive-include mgk/examples *.py *.json
+recursive-include research_results/case_studies *.md *.json *.png *.csv *.py
+exclude research_results/case_studies/electromagnetic_xie2016_kbm/data/mode_comparison.json
+exclude research_results/case_studies/electromagnetic_xie2016_kbm/data/python_cpu_double_scan.csv
+prune research_results/case_studies/electromagnetic_xie2016_kbm/scripts
+exclude research_results/case_studies/**/data/matlab_*
+exclude research_results/case_studies/**/scripts/*matlab*
+recursive-include mgk/tests *.py
+include tools/make_stellarator_profile.py
+include tools/convert_vmec_geometry.py
+include tools/convert_gene_geometry.py
+prune matlab_legacy
+prune analysis
+prune build
+prune docs
+prune figures
+prune output
+prune release_build
+prune tests
+prune tmp
+prune .cupy_cache
+prune .venv
+global-exclude .DS_Store
+global-exclude *.py[cod]
+global-exclude __pycache__
